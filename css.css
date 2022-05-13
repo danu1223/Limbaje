@@ -1,0 +1,269 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+.banner{
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url(https://miro.medium.com/max/5000/0*0oE8zfh3fnmMmlZZ);
+}
+.navbar{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo{
+	width:200px;
+	height: 200px;
+	cursor: pointer;
+}
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform:uppercase ;
+}
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0%;
+	background: #009688;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+.navbar ul li:hover::after{
+	width: 100%;
+}
+.content1{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+}
+.content1 h1{
+	font-size: 70px;
+	margin-top: 80px;
+	cursor: pointer;
+}
+#btn{
+	text-decoration: none;
+	padding: 8px 30px;
+	border-radius: 40px;
+	background: #fff;
+	color: #2b1055;
+	font-size: 1.5em;
+	z-index: 9;
+	transform: translateY(100px);
+}
+.section{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #1e1e1e;
+	background-attachment: fixed;
+}
+.container{
+	position: relative;
+	width: 1150px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.container .card{
+	position: relative;
+	width: 600px;
+	height: 780px;
+	background: white;
+	margin: 35px;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+}
+.container:hover .card{
+	filter: blur(20px);
+	transform: scale(0.9);
+	opacity: 0.5;
+}
+.container .card:hover{
+	filter: blur(0px);
+	transform: scale(1.1);
+	opacity: 1;
+}
+.container .card .circle{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: black;
+	clip-path: circle( 300px at center 0);
+	text-align: center;
+}
+.container .card .circle h2{
+	color: white;
+	font-size: 4.5em;
+	padding: 30px 0;
+} 
+.container .card .content{
+	position: absolute;
+	bottom: 10px;
+	padding: 20px;
+	text-align: center;
+}
+.container .card .content p{
+	color: #666;	
+}
+.container .card .content a{
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	color: black;
+	border-radius: 40px;
+	text-decoration: none;
+	margin-top: 20px;
+}
+.container .card:nth-child(1) .circle,
+.container .card:nth-child(1) .content a
+{
+	background: #ffaf00;
+}
+.container .card:nth-child(2) .circle,
+.container .card:nth-child(2) .content a{
+	background: #da2268;
+}
+.container .card:nth-child(3) .circle,
+.container .card:nth-child(3) .content a{
+	background: #bb02ff;
+}
+footer{
+	position: relative;
+	width: 100%;
+	background: #3586ff;
+	min-height: 100px;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+footer .icon, footer .menu{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer .icon li, footer .menu li{
+	list-style: none;
+	margin:  10px ;
+}
+footer .icon li a{
+	font-size: 2em;
+	color: white;
+	display: inline-block;
+	transition: 0.5s;
+}
+footer .icon li a:hover{
+	transform: translateY(-10px);
+}
+footer .menu li a{
+	font-size: 1.2em;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	opacity: 0.75;
+}
+footer .menu li a: hover{
+	opacity: 1;
+}
+footer .wave{
+	position: absolute;
+	top: -100px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(wave.png);
+	background-size: 1000px 100px;
+}
+footer .wave#wave1{
+	z-index: 1000;
+	opacity: 1;
+	bottom: 0;
+	animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2{
+	z-index: 999;
+	opacity: 0.5;
+	bottom: 10px;
+	animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3{
+	z-index: 1000;
+	opacity: 0.2;
+	bottom: 15px;
+	animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4{
+	z-index: 999;
+	opacity: 0.7;
+	bottom: 20px;
+	animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave{
+	0%{
+		background-position-x:	1000px ;
+	}
+	100%{
+		background-position-x:	0px ;
+	}
+}
+@keyframes animateWave_02{
+	0%{
+		background-position-x:	0px ;
+	}
+	100%{
+		background-position-x:	1000px ;
+	}
+}
+.scrollTop{
+	position: fixed;
+	bottom: 800px;
+	right: 60px;
+	width: 60px;
+	height: 60px;
+	background: white url(up.png);
+	border-radius: 50%;
+	background-size: 40px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	z-index: 100000;
+	visibility: hidden ;
+	opacity: 0;
+	transition: 0.5s;
+}
+.scrollTop.active{
+	bottom: 40px;
+	visibility: visible;
+	opacity: 1;
+}

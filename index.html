@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="limbaj.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<title>
+		Limbaje de programare WEB
+	</title>
+</head>
+<body>
+<div class="banner">
+	<div class="navbar">
+		<img src="imagini/logo1.png" class="logo">
+		<ul>
+			<li> <a href="html.html">HTML</a> </li>
+			<li> <a href="css.html">CSS</a> </li>
+			<li><a href="php.html">PHP</a></li>
+			<li> <a href="java.html">JavaScript</a> </li>
+		</ul>
+	</div>
+	<div class="content">
+		<h1 id="text">Limbaje de programare WEB</h1>
+		<br><br><br>
+		<section>
+		<a href="#sec" id="btn" >Exploră</a>
+		</section>
+	</div>
+</div>
+<div class="sec" id="sec">
+	<section id/class="introducere">
+		<div class="scrollTop" onclick="scrollToTop()"></div>
+	<div class="container">
+	<div class="box">
+		<span></span>
+		<div class="content1">
+			<h2>Ce este un limbaj de programare?</h2>
+			<p>		Un limbaj de programare este un limbaj formal de expresii și reguli (sau tehnici) valide de formulare a instrucțiunilor pentru un computer.  Specificarea constă practic în întocmirea/scrierea programelor necesare ("programare").</p>
+			<a href="https://ro.wikipedia.org/wiki/Limbaj_de_programare">Află mai mult</a>
+		</div>
+	</div>
+
+	<div class="box">
+		<span></span>
+		<div class="content1">
+			<h2>Ce este programarea WEB?</h2>
+			<p>Programarea web se referă în general la task-urile care țin de dezvoltarea site-urilor web. Acestea pot fi dezvoltate fie cu ajutorul internetul sau al intranetului, iar procesul include designul site-ul, dezvoltarea conținutului, scriptingul de pe partea de servere sau de clienți și, desigur, configurarea setărilor de securitate. 
+<br>
+Într-un sens mai larg, programarea web cuprinde toate acțiunile, update-urile și operațiile necesare pentru a construi, întreține și manageria un website, pentru ca performanța acestuia, experiența utilizatorilor și viteza sa să fie cele optime. 
+<br>
+Programarea web mai este cunoscută în domeniu și ca web sau websitedevelopment, iar profesioniștii care se ocupă cu acest lucru sunt Programatori Web sau Web Developers. </p>
+			<a href="https://it.emoldova.org/community/technology/ce-este-programarea-web/">Află mai mult</a>
+		</div>
+	</div>
+
+	<div class="box">
+		<span></span>
+		<div class="content1">
+			<h2>Cele mai populare limbaje de programare WEB</h2>
+			<p>Cele mai populare limbaje de programare WEB sunt: Java, C, C++, Python, Javascript, PHP, HTML, CSS,  Perl,  Ruby, Lisp, C#.</p>
+			<a href="https://itstep.md/blog/limbaje-de-programare-populare-i-cele-mai-bune">Află mai mult</a>
+		</div>
+	</div>
+</div>
+<div class="full" id="fullImgBox">
+		<img src="imagini/1.jpg" id="fullImg">
+		<span onclick="closeFullImg()">X</span>
+	</div>
+<div class="img">
+	<img src="imagini/img1.jpg" onclick="openFullImg(this.src)">
+	<img src="imagini/img3.jpg" onclick="openFullImg(this.src)">
+	<img src="imagini/img5.png" onclick="openFullImg(this.src)">
+	<img src="imagini/img6.jpg" onclick="openFullImg(this.src)">
+</div>
+<br><br><br>
+<div>
+	<iframe width="620"  height="315" class="center" src="https://www.youtube.com/embed/kHAeatRVstw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/1NEiSxizn1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" align="right" src="https://www.youtube.com/embed/J8hzJxb0rpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+</div>
+	 </section>
+<footer>
+	<div class="waves">
+		<div class="wave" id="wave1"></div>
+		<div class="wave" id="wave2"></div>
+		<div class="wave" id="wave3"></div>
+		<div class="wave" id="wave4"></div>
+	</div>
+	<ul class="icon">
+		<li><a href="https://www.facebook.com/profile.php?id=100011490846498"><ion-icon name="logo-facebook"></ion-icon></a></li>
+		<li><a href="https://www.twitch.tv/zend0n"><ion-icon name="logo-twitch"></ion-icon></a></li>
+		<li><a href="https://instagram.com/raileanu_dan?utm_medium=copy_link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+		<li><a href="https://www.whatsapp.com/?lang=ru"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+	</ul>
+	<ul class="menu">
+		<li><a href="html.html">HTML</a></li>
+		<li><a href="css.html">CSS</a></li>
+		<li><a href="php.html">PHP</a></li>
+		<li><a href="java.html">JavaScript</a></li>
+	</ul>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+	let text=document.getElementById('text');
+	let btn=document.getElementById('btn');
+	window.addEventListener('scroll',function () {
+			let value=window.scrollY;
+			text.style.marginRight=value * 4 + 'px';
+			text.style.marginTop=value * 1.5 + 'px';
+			btn.style.marginTop=value * 1.5 + 'px';
+	})
+</script>
+<script type="text/javascript">
+	window.addEventListener('scroll', function(){
+		var scroll=document.querySelector('.scrollTop')
+		scroll.classList.toggle("active", window.scrollY>500)
+	})
+	function scrollToTop(){
+		window.scrollTo({
+			top:0,
+			behavior:"smooth"
+		})
+	}
+</script>
+<script>
+	var fullImgBox=document.getElementById('fullImgBox');
+	var fullImg=document.getElementById('fullImg');
+	function openFullImg(pic) {
+		fullImgBox.style.display="flex";
+		fullImg.src=pic;
+	}
+	function closeFullImg(){
+		fullImgBox.style.display="none";
+	}
+</script>
+</body>
+</html>

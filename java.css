@@ -1,0 +1,281 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+.banner{
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url(https://www.codingem.com/wp-content/uploads/2021/11/artturi-jalli-JuhViPxBBlU-unsplash-scaled.jpg);
+}
+.navbar{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo{
+	width:200px;
+	height: 200px;
+	cursor: pointer;
+}
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform:uppercase ;
+}
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0%;
+	background: #009688;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+.navbar ul li:hover::after{
+	width: 100%;
+}
+.content1{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+}
+.content1 h1{
+	font-size: 70px;
+	margin-top: 80px;
+	cursor: pointer;
+}
+#btn{
+	text-decoration: none;
+	padding: 8px 30px;
+	border-radius: 40px;
+	background: #fff;
+	color: #2b1055;
+	font-size: 1.5em;
+	z-index: 9;
+	transform: translateY(100px);
+}
+.section{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #1e1e1e;
+}
+.section1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	transform-style: preserve-3d;
+	width: 1100px;
+}
+.section1 .card{
+	position: relative;
+	width: 520px;
+	height: 520px;
+	margin: 100px;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+.section1 .card .box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: 1s ease;
+}
+.section1 .card:hover .box{
+	transform: rotateY(180deg);
+}
+.section1 .card .box .imgBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.section1 .card .box .imgBox img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background: #1e1e1e;
+}
+.section1 .card .box .content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+}
+.section1 .card .box .content div{
+	transform-style: preserve-3d;
+	padding: 20px;
+	background: linear-gradient(45deg, #fe0061, #ffeb3b);
+	transform: translateZ(100px);
+}
+.section1 .card .box .content div h2{
+	color: white;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+.section1 .card .box .content div p{
+	color: white;
+	font-size: 16px;
+}
+.section1 .card .box .content a{
+	display: inline-block ;
+	font-size: 1.1em;
+	color: black;
+	background: white;
+	padding: 10px;
+	border-radius: 4px ;
+	text-decoration: none;
+	font-weight: 700;
+	margin-top: 5px;
+}
+.section1 iframe{
+	margin: 100px;
+}
+footer{
+	position: relative;
+	width: 100%;
+	background: #3586ff;
+	min-height: 100px;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+footer .icon, footer .menu{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer .icon li, footer .menu li{
+	list-style: none;
+	margin:  10px ;
+}
+footer .icon li a{
+	font-size: 2em;
+	color: white;
+	display: inline-block;
+	transition: 0.5s;
+}
+footer .icon li a:hover{
+	transform: translateY(-10px);
+}
+footer .menu li a{
+	font-size: 1.2em;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	opacity: 0.75;
+}
+footer .menu li a: hover{
+	opacity: 1;
+}
+footer .wave{
+	position: absolute;
+	top: -100px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(wave.png);
+	background-size: 1000px 100px;
+}
+footer .wave#wave1{
+	z-index: 1000;
+	opacity: 1;
+	bottom: 0;
+	animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2{
+	z-index: 999;
+	opacity: 0.5;
+	bottom: 10px;
+	animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3{
+	z-index: 1000;
+	opacity: 0.2;
+	bottom: 15px;
+	animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4{
+	z-index: 999;
+	opacity: 0.7;
+	bottom: 20px;
+	animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave{
+	0%{
+		background-position-x:	1000px ;
+	}
+	100%{
+		background-position-x:	0px ;
+	}
+}
+@keyframes animateWave_02{
+	0%{
+		background-position-x:	0px ;
+	}
+	100%{
+		background-position-x:	1000px ;
+	}
+}
+.scrollTop{
+	position: fixed;
+	bottom: 800px;
+	right: 60px;
+	width: 60px;
+	height: 60px;
+	background: white url(up.png);
+	border-radius: 50%;
+	background-size: 40px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	z-index: 100000;
+	visibility: hidden ;
+	opacity: 0;
+	transition: 0.5s;
+}
+.scrollTop.active{
+	bottom: 40px;
+	visibility: visible;
+	opacity: 1;
+}
